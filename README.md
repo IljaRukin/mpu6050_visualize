@@ -6,4 +6,7 @@ additionally derived and implemented kalman filter
 derivation of kalman filter and visualization in 2D (position px/py and velocity vx/vy with control input ax/ay to stay in circular path)
 
 ## visualize_raw_data.ipynb
-read out and visualize data from mpu_6050_i2cdevlib_raw.ino, quaternion math and transformations included
+read out and visualize data from mpu_6050_i2cdevlib_raw.ino, quaternion math and transformations included.
+
+# TODO:
+filter/transform data and visualize (current script not working)
