@@ -1,8 +1,6 @@
 /*
 GY-521 / MPU5060
-3-axis gyroscope, 3-axis accelerometer, temperature sensor, digital motion processor (DMP)
-#libraries:
-Wire.h (I2C Communication)
+returns 3-axis gyroscope, 3-axis accelerometer and temperature data
 Pins:
  * GND = GND
  * VCC = 3.3V

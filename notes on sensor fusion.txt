@@ -1,0 +1,35 @@
+# imu motion tracking
+orientation: set at start, tracked by integrating gyro, corrected by magnetometer (north) and accelerometer (earths gravity down)
+acceleration: measured directly
+velocity: integrate acceleration, detect standstill (application specific)
+position: integrate velocity+acceleration
+
+note: acceleration is in local (intrinsic) direction, usually it makes sense to transform it to global (extrinsic coordinates for tracking
+
+## data preparation
+- remove outliners
+- filter noise
+
+## gyro
+*measures orientation change in °/s
+*short term: reliable; long term: drift
+calibration: correct bias (counteract drift)
+
+## acceleration
+*measures linear acceleration in m/s^2
+*short term: noisy; long term: reliable at detecting earths gravity
+calibration: scale output againsts 1g earth gravity at rest
+
+## magnetic
+*measures direction of magnetic field
+*short term: noisy; long term: reliable orientation correction
+=> orientation correction on long time scales
+calibration: correct deformation and offset (by internal structure and internal magnetic field) of magnetic field vector when rotating device
+
+
+
+## pressure
+=> height
+
+## temperature
+=>drift calibration/compensation
